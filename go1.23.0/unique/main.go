@@ -12,6 +12,7 @@ package main
 
 // mattnさん
 // https://github.com/mattn/go-unique-example/blob/main/main.go
+// メモリ使用量の比較をしている
 
 import (
 	"log"
@@ -29,6 +30,7 @@ var ss = []string{
 
 const N = 10000000
 
+// 現在のメモリ使用量を取得
 func getAlloc() uint64 {
 	var m runtime.MemStats
 	runtime.GC()
@@ -36,6 +38,7 @@ func getAlloc() uint64 {
 	return m.Alloc
 }
 
+// uniqueパッケージを使わない場合
 func test_without_unique_package() {
 	before := getAlloc()
 	a := make([]string, N)
@@ -45,6 +48,7 @@ func test_without_unique_package() {
 	log.Printf("test_without_unique_package: %v allocated", getAlloc()-before)
 }
 
+// uniqueパッケージを使う場合
 func test_with_unique_package() {
 	before := getAlloc()
 	a := make([]unique.Handle[string], N)
@@ -54,8 +58,13 @@ func test_with_unique_package() {
 	log.Printf("test_with_unique_package: %v allocated", getAlloc()-before)
 }
 
+// 処理の比較
 func main() {
 	test_without_unique_package()
 	runtime.GC()
 	test_with_unique_package()
 }
+
+// 結果, 断然メモリ使用量が少ない
+// test_without_unique_package: 21088 allocated
+// test_with_unique_package: 1440 allocated
