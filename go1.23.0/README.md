@@ -7,8 +7,9 @@
 
 - [Release Notes](https://tip.golang.org/doc/go1.23)
 - [blog](https://go.dev/blog/go1.23)
-- [ユーチャーさんの記事(slices/map)](https://future-architect.github.io/articles/20240719a/)
-- [ユーチャーさんの記事(range over func,iter)](https://future-architect.github.io/articles/20240718a/)
+- [フューチャーさんの記事(slices/map)](https://future-architect.github.io/articles/20240719a/)
+- [フューチャーさんの記事(range over func,iter)](https://future-architect.github.io/articles/20240718a/)
+- [網羅的な記事](https://zenn.dev/koya_iwamura/articles/7e7482c7222e37)
 
 ## playground
 
