@@ -10,6 +10,12 @@ package main
 // one := unique.Make[int](1)
 // }
 
+// NOTE: リリースパーティより
+// interningというかなり攻めたメモリ使用量の削減手法をGoに実装したもの
+// 使い道
+// 同じ値をいろんな箇所で何度も使う場合
+// 特に値がstringや容量が大きい構造体の場合。
+
 // mattnさん
 // https://github.com/mattn/go-unique-example/blob/main/main.go
 // メモリ使用量の比較をしている
