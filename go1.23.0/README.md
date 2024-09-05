@@ -10,6 +10,7 @@
 - [フューチャーさんの記事(slices/map)](https://future-architect.github.io/articles/20240719a/)
 - [フューチャーさんの記事(range over func,iter)](https://future-architect.github.io/articles/20240718a/)
 - [網羅的な記事](https://zenn.dev/koya_iwamura/articles/7e7482c7222e37)
+- [リリースパーティ](https://www.youtube.com/watch?v=SNdToIxRn20)
 
 ## playground
 
